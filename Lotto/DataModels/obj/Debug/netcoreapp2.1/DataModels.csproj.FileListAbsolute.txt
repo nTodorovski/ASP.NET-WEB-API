@@ -1,0 +1,6 @@
+C:\Users\nikola.ztodorovski\source\repos\Lotto\DataModels\bin\Debug\netcoreapp2.1\DataModels.deps.json
+C:\Users\nikola.ztodorovski\source\repos\Lotto\DataModels\bin\Debug\netcoreapp2.1\DataModels.dll
+C:\Users\nikola.ztodorovski\source\repos\Lotto\DataModels\obj\Debug\netcoreapp2.1\DataModels.csprojAssemblyReference.cache
+C:\Users\nikola.ztodorovski\source\repos\Lotto\DataModels\obj\Debug\netcoreapp2.1\DataModels.csproj.CoreCompileInputs.cache
+C:\Users\nikola.ztodorovski\source\repos\Lotto\DataModels\obj\Debug\netcoreapp2.1\DataModels.AssemblyInfoInputs.cache
+C:\Users\nikola.ztodorovski\source\repos\Lotto\DataModels\obj\Debug\netcoreapp2.1\DataModels.AssemblyInfo.cs

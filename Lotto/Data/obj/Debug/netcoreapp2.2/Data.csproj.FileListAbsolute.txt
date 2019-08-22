@@ -1,0 +1,12 @@
+C:\Users\nikola.ztodorovski\source\repos\Lotto\Data\bin\Debug\netcoreapp2.2\Data.deps.json
+C:\Users\nikola.ztodorovski\source\repos\Lotto\Data\bin\Debug\netcoreapp2.2\Data.dll
+C:\Users\nikola.ztodorovski\source\repos\Lotto\Data\bin\Debug\netcoreapp2.2\Data.pdb
+C:\Users\nikola.ztodorovski\source\repos\Lotto\Data\bin\Debug\netcoreapp2.2\DomainModels.dll
+C:\Users\nikola.ztodorovski\source\repos\Lotto\Data\bin\Debug\netcoreapp2.2\DomainModels.pdb
+C:\Users\nikola.ztodorovski\source\repos\Lotto\Data\obj\Debug\netcoreapp2.2\Data.csprojAssemblyReference.cache
+C:\Users\nikola.ztodorovski\source\repos\Lotto\Data\obj\Debug\netcoreapp2.2\Data.csproj.CoreCompileInputs.cache
+C:\Users\nikola.ztodorovski\source\repos\Lotto\Data\obj\Debug\netcoreapp2.2\Data.AssemblyInfoInputs.cache
+C:\Users\nikola.ztodorovski\source\repos\Lotto\Data\obj\Debug\netcoreapp2.2\Data.AssemblyInfo.cs
+C:\Users\nikola.ztodorovski\source\repos\Lotto\Data\obj\Debug\netcoreapp2.2\Data.csproj.CopyComplete
+C:\Users\nikola.ztodorovski\source\repos\Lotto\Data\obj\Debug\netcoreapp2.2\Data.dll
+C:\Users\nikola.ztodorovski\source\repos\Lotto\Data\obj\Debug\netcoreapp2.2\Data.pdb
