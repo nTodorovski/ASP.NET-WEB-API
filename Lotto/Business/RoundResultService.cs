@@ -31,29 +31,39 @@ namespace Business
             Random random = new Random();
             int counter = 0;
 
-            for (int i = 0; i < winningCombination.Count; i++)
+            //for (int i = 0; i < winningCombination.Count; i++)
+            //{
+            //    int number = random.Next(1, 37);
+            //    if (counter == 6)
+            //        break;
+
+            //    if(number == winningCombination[i])
+            //    {
+            //        i--;
+            //        continue;
+            //    }
+            //    else
+            //    {
+            //        winningCombination.Add(number);
+            //        counter++;
+            //    }
+            //}
+
+            for(var i = 0; i < 7; i++)
             {
                 int number = random.Next(1, 37);
-                if (counter == 6)
-                    break;
-
-                if(number == winningCombination[i])
-                {
+                if (winningCombination.Contains(number)) {
                     i--;
                     continue;
                 }
-                else
-                {
-                    winningCombination.Add(number);
-                    counter++;
-                }
+
+                winningCombination.Add(number);
             }
 
             
-            round.WinningCombination = winningCombination;
+            round.WinningCombination = string.Join(",", winningCombination);
 
             var roundId = _roundResultRepository.GetAll().Max(x => x.RoundId);
-
 
             var tickets = _ticketRepository
                 .GetAll()
@@ -64,17 +74,11 @@ namespace Business
 
             foreach (var ticket in tickets)
             {
-                List<int> combinatin = new List<int>();
-
-                var stringNumbers = ticket.Combination.Split(",");
-                foreach (var number in stringNumbers)
-                {
-                    combinatin.Add(Int32.Parse(number));
-                }
+                var combination = ticket.Combination.Split(",").Select(x => Int32.Parse(x)).ToList();
 
                 int combinationCounter = 0;
 
-                foreach (var number in combinatin)
+                foreach (var number in combination)
                 {
                     if (winningCombination.Contains(number))
                         combinationCounter++;

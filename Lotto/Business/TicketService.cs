@@ -41,6 +41,7 @@ namespace Business
             if (!match.Success)
                 throw new Exception("Invalid combination");
 
+            // TODO: different numbers in combination
             var ticket = new Ticket()
             {
                 Combination = model.Combination,
