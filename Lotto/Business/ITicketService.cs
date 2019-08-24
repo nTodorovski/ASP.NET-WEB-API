@@ -5,7 +5,7 @@ namespace Business
 {
     public interface ITicketService
     {
-        void CreateTicket(int id,string combination);
+        void CreateTicket(int id,TicketModel model);
         IEnumerable<TicketModel> GetAllByUser(int id);
         IEnumerable<TicketModel> GetAllTickets();
     }
