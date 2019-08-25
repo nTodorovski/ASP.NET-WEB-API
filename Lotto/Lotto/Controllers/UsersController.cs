@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Business;
+using DomainModels;
 using Microsoft.AspNetCore.Mvc;
 using Models;
 
@@ -20,13 +21,21 @@ namespace Lotto.Controllers
         {
             _userService = userService;
         }
-       
+
+        [Route("users")]
+        [HttpGet]
+        public IEnumerable<User> GetAll()
+        {
+            return _userService.GetAll();
+        }
+
         // POST api/<controller>
         [Route("register")]
         [HttpPost]
-        public void RegisterUser([FromBody] UserModel model)
+        public IActionResult RegisterUser([FromBody] UserModel model)
         {
             _userService.Register(model);
+            return Ok();
         }
     }
 }

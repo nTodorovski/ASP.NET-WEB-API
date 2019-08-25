@@ -23,31 +23,17 @@ namespace Business
 
         }
 
+        public IEnumerable<RoundResult> GetAll()
+        {
+            return _roundResultRepository.GetAll();
+        }
+
         public void Draw()
         {
             RoundResult round = new RoundResult();
 
             List<int> winningCombination = new List<int>();
             Random random = new Random();
-            int counter = 0;
-
-            //for (int i = 0; i < winningCombination.Count; i++)
-            //{
-            //    int number = random.Next(1, 37);
-            //    if (counter == 6)
-            //        break;
-
-            //    if(number == winningCombination[i])
-            //    {
-            //        i--;
-            //        continue;
-            //    }
-            //    else
-            //    {
-            //        winningCombination.Add(number);
-            //        counter++;
-            //    }
-            //}
 
             for(var i = 0; i < 7; i++)
             {
@@ -63,11 +49,14 @@ namespace Business
             
             round.WinningCombination = string.Join(",", winningCombination);
 
-            var roundId = _roundResultRepository.GetAll().Max(x => x.RoundId);
+            int roundId = 1;
+
+            if (_roundResultRepository.GetAll().Count() != 0)
+                roundId = _roundResultRepository.GetAll().Max(x => x.Id) + 1;
 
             var tickets = _ticketRepository
                 .GetAll()
-                .Where(x => x.Round == (roundId + 1))
+                .Where(x => x.RoundId == roundId)
                 .ToList();
 
             round.Tickets = tickets;
@@ -113,6 +102,9 @@ namespace Business
                 user.Balance = user.Balance + ticket.AwardBalance;
                 _ticketRepository.Update(ticket);
                 _userRepository.Update(user);
+                //Puka tuka pred roundRepository
+                //Da se prasha zosto vo baza tiketite taka se zacuvuvaat
+                //zosto na vo TicketService ne moze da se stavi ticketot vo Tickets na Userot
                 _roundResultRepository.Add(round);
             }
         }

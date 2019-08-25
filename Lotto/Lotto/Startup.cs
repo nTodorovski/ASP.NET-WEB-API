@@ -37,6 +37,12 @@ namespace Lotto
 
             services.AddTransient<IRepository<User>, UserRepository>();
             services.AddTransient<IUserService, UserService>();
+
+            services.AddTransient<IRepository<Ticket>, TicketRepository>();
+            services.AddTransient<ITicketService, TicketService>();
+
+            services.AddTransient<IRepository<RoundResult>, RoundResultRepository>();
+            services.AddTransient<IRoundResultService, RoundResultService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -16,7 +16,7 @@ namespace DomainModels
         public string Combination { get; set; }
         public int UserId { get; set; }
         public User User { get; set; }
-        public int Round { get; set; }
+        public int RoundId { get; set; }
         public StatusEnum Status { get; set; }
         public int AwardBalance { get; set; }
     }

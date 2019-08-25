@@ -10,7 +10,7 @@ namespace DomainModels
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int RoundId { get; set; }
+        public int Id { get; set; }
         [StringLength(20)]
         public string WinningCombination { get; set; }
         public ICollection<Ticket> Tickets { get; set; }

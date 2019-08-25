@@ -38,7 +38,7 @@ namespace Data
         {
             using (var dbContext = new LottoContext())
             {
-                return dbContext.RoundResults.FirstOrDefault(x => x.RoundId == id);
+                return dbContext.RoundResults.FirstOrDefault(x => x.Id == id);
             }
         }
 

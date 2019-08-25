@@ -25,35 +25,53 @@ namespace Business
 
         }
 
-        public void CreateTicket(int id, TicketModel model)
+        public void CreateTicket(TicketModel model)
         {
-            var user = _userRepository.GetById(id);
+            var user = _userRepository.GetById(model.UserId);
             if (user == null)
                 throw new Exception("User not found!");
 
             if (user.Balance <= 50)
                 throw new Exception("You don't have enough money to place a ticket!");
 
-            var nextRound = _roundResultRepository.GetAll().Max(x => x.RoundId) + 1;
+            int nextRound = 1;
 
-            Regex regex = new Regex("^[0-9]{2}[,][0-9]{2}[,][0-9]{2}[,][0-9]{2}[,][0-9]{2}[,][0-9]{2}[,][0-9]{2}$");
+            if(_roundResultRepository.GetAll().Count() != 0)
+                nextRound = _roundResultRepository.GetAll().Max(x => x.Id) + 1;
+
+            Regex regex = new Regex(@"^(\d{1}|\d{2})[,](\d{1}|\d{2})[,](\d{1}|\d{2})[,](\d{1}|\d{2})[,](\d{1}|\d{2})[,](\d{1}|\d{2})[,](\d{1}|\d{2})$");
             var match = regex.Match(model.Combination);
             if (!match.Success)
-                throw new Exception("Invalid combination");
+                throw new Exception("Invalid combination.Please enter 7 numbers seperated by commas.");
 
-            // TODO: different numbers in combination
+            var numbers = model.Combination.Split(",").Select(x => int.Parse(x)).ToList();
+
+            foreach (var number in numbers)
+            {
+                if (number < 1 || number > 37)
+                    throw new Exception("Enter valid numbers from 1 to 37!");
+            }
+            var duplicates = numbers
+                .GroupBy(s => s)
+                .Where(g => g.Count() > 1)
+                .Select(g => g.Key);
+
+            if (duplicates.Count() > 0)
+                throw new Exception("You have duplicate numbers!");
+
             var ticket = new Ticket()
             {
                 Combination = model.Combination,
-                UserId = id,
+                UserId = model.UserId,
                 Status = StatusEnum.Pending,
                 AwardBalance = 0,
-                Round = nextRound
+                RoundId = nextRound
             };
 
             user.Balance = user.Balance - 50;
+            //TODO: Da se prasha za ova zosto ne raboti
+            //user.Tickets.Add(ticket);
             _userRepository.Update(user);
-
             _ticketRepository.Add(ticket);
         }
 
@@ -62,11 +80,10 @@ namespace Business
             return _ticketRepository
                 .GetAll()
                 .Where(x => x.UserId == id)
-                .Select(x => new TicketModel {
-                    Combination = x.Combination,
-                    Round = x.Round,
-                    Status = x.Status,
-                    AwardBalance = x.AwardBalance
+                .Select(x => new TicketModel
+                {
+                    UserId = id,
+                    Combination = x.Combination
                 }).ToList();
         }
 
@@ -76,10 +93,7 @@ namespace Business
                .GetAll()
                .Select(x => new TicketModel
                {
-                   Combination = x.Combination,
-                   Round = x.Round,
-                   Status = x.Status,
-                   AwardBalance = x.AwardBalance
+                   Combination = x.Combination
                }).ToList();
         }
     }

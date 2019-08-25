@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using Data;
 using DomainModels;
@@ -15,6 +16,11 @@ namespace Business
         public UserService(IRepository<User> userRepository)
         {
             _userRepository = userRepository;
+        }
+
+        public IEnumerable<User> GetAll()
+        {
+            return _userRepository.GetAll().ToList();
         }
 
         public void Register(UserModel model)

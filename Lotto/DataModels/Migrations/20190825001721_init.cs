@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DomainModels.Migrations
 {
-    public partial class Init : Migration
+    public partial class init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -11,13 +11,13 @@ namespace DomainModels.Migrations
                 name: "RoundResults",
                 columns: table => new
                 {
-                    RoundId = table.Column<int>(nullable: false)
+                    Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     WinningCombination = table.Column<string>(maxLength: 20, nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_RoundResults", x => x.RoundId);
+                    table.PrimaryKey("PK_RoundResults", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -46,19 +46,19 @@ namespace DomainModels.Migrations
                     Combination = table.Column<string>(maxLength: 20, nullable: true),
                     UserId = table.Column<int>(nullable: false),
                     UserId1 = table.Column<int>(nullable: true),
-                    Round = table.Column<int>(nullable: false),
+                    RoundId = table.Column<int>(nullable: false),
                     Status = table.Column<int>(nullable: false),
                     AwardBalance = table.Column<int>(nullable: false),
-                    RoundResultRoundId = table.Column<int>(nullable: true)
+                    RoundResultId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Tickets", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Tickets_RoundResults_RoundResultRoundId",
-                        column: x => x.RoundResultRoundId,
+                        name: "FK_Tickets_RoundResults_RoundResultId",
+                        column: x => x.RoundResultId,
                         principalTable: "RoundResults",
-                        principalColumn: "RoundId",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Tickets_Users_UserId",
@@ -75,9 +75,9 @@ namespace DomainModels.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Tickets_RoundResultRoundId",
+                name: "IX_Tickets_RoundResultId",
                 table: "Tickets",
-                column: "RoundResultRoundId");
+                column: "RoundResultId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Tickets_UserId",

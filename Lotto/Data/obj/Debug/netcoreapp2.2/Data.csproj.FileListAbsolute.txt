@@ -10,3 +10,15 @@ C:\Users\nikola.ztodorovski\source\repos\Lotto\Data\obj\Debug\netcoreapp2.2\Data
 C:\Users\nikola.ztodorovski\source\repos\Lotto\Data\obj\Debug\netcoreapp2.2\Data.csproj.CopyComplete
 C:\Users\nikola.ztodorovski\source\repos\Lotto\Data\obj\Debug\netcoreapp2.2\Data.dll
 C:\Users\nikola.ztodorovski\source\repos\Lotto\Data\obj\Debug\netcoreapp2.2\Data.pdb
+C:\Users\Nikola\Desktop\ASP.NET-WEB-API\Lotto\Data\bin\Debug\netcoreapp2.2\Data.deps.json
+C:\Users\Nikola\Desktop\ASP.NET-WEB-API\Lotto\Data\bin\Debug\netcoreapp2.2\Data.dll
+C:\Users\Nikola\Desktop\ASP.NET-WEB-API\Lotto\Data\bin\Debug\netcoreapp2.2\Data.pdb
+C:\Users\Nikola\Desktop\ASP.NET-WEB-API\Lotto\Data\bin\Debug\netcoreapp2.2\DomainModels.dll
+C:\Users\Nikola\Desktop\ASP.NET-WEB-API\Lotto\Data\bin\Debug\netcoreapp2.2\DomainModels.pdb
+C:\Users\Nikola\Desktop\ASP.NET-WEB-API\Lotto\Data\obj\Debug\netcoreapp2.2\Data.csprojAssemblyReference.cache
+C:\Users\Nikola\Desktop\ASP.NET-WEB-API\Lotto\Data\obj\Debug\netcoreapp2.2\Data.csproj.CoreCompileInputs.cache
+C:\Users\Nikola\Desktop\ASP.NET-WEB-API\Lotto\Data\obj\Debug\netcoreapp2.2\Data.AssemblyInfoInputs.cache
+C:\Users\Nikola\Desktop\ASP.NET-WEB-API\Lotto\Data\obj\Debug\netcoreapp2.2\Data.AssemblyInfo.cs
+C:\Users\Nikola\Desktop\ASP.NET-WEB-API\Lotto\Data\obj\Debug\netcoreapp2.2\Data.csproj.CopyComplete
+C:\Users\Nikola\Desktop\ASP.NET-WEB-API\Lotto\Data\obj\Debug\netcoreapp2.2\Data.dll
+C:\Users\Nikola\Desktop\ASP.NET-WEB-API\Lotto\Data\obj\Debug\netcoreapp2.2\Data.pdb

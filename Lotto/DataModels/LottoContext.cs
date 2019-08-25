@@ -15,7 +15,8 @@ namespace DomainModels
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            options.UseSqlServer("Server=PETRA05;Database=LottoDb;User Id=SA;Password=Password1;");
+            options.UseSqlServer("Server=.;Database=LottoDb;Trusted_Connection=True;");
+            //options.UseSqlServer("Server=PETRA05;Database=LottoDb;User Id=SA;Password=Password1;");
         }
 
         protected override void OnModelCreating(ModelBuilder builder)
@@ -24,6 +25,11 @@ namespace DomainModels
                 .HasOne<User>()
                 .WithMany(x => x.Tickets)
                 .HasForeignKey(x => x.UserId);
+
+            //builder.Entity<User>()
+            //    .HasMany<Ticket>()
+            //    .WithOne(x => x.User)
+            //    .HasForeignKey(x => x.UserId);
         }
 
         public DbSet<User> Users { get; set; }

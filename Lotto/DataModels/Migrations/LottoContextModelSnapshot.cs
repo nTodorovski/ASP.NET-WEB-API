@@ -21,14 +21,14 @@ namespace DomainModels.Migrations
 
             modelBuilder.Entity("DomainModels.RoundResult", b =>
                 {
-                    b.Property<int>("RoundId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("WinningCombination")
                         .HasMaxLength(20);
 
-                    b.HasKey("RoundId");
+                    b.HasKey("Id");
 
                     b.ToTable("RoundResults");
                 });
@@ -44,9 +44,9 @@ namespace DomainModels.Migrations
                     b.Property<string>("Combination")
                         .HasMaxLength(20);
 
-                    b.Property<int>("Round");
+                    b.Property<int>("RoundId");
 
-                    b.Property<int?>("RoundResultRoundId");
+                    b.Property<int?>("RoundResultId");
 
                     b.Property<int>("Status");
 
@@ -56,7 +56,7 @@ namespace DomainModels.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("RoundResultRoundId");
+                    b.HasIndex("RoundResultId");
 
                     b.HasIndex("UserId");
 
@@ -90,7 +90,7 @@ namespace DomainModels.Migrations
                 {
                     b.HasOne("DomainModels.RoundResult")
                         .WithMany("Tickets")
-                        .HasForeignKey("RoundResultRoundId");
+                        .HasForeignKey("RoundResultId");
 
                     b.HasOne("DomainModels.User")
                         .WithMany("Tickets")
