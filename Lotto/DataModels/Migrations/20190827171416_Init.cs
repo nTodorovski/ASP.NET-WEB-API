@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DomainModels.Migrations
 {
-    public partial class InitSetup : Migration
+    public partial class Init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -27,6 +27,7 @@ namespace DomainModels.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Username = table.Column<string>(nullable: true),
+                    Password = table.Column<string>(nullable: true),
                     FirstName = table.Column<string>(nullable: true),
                     LastName = table.Column<string>(nullable: true),
                     Balance = table.Column<int>(nullable: false),
@@ -59,6 +60,11 @@ namespace DomainModels.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
+
+            migrationBuilder.InsertData(
+                table: "Users",
+                columns: new[] { "Id", "Balance", "FirstName", "LastName", "Password", "Role", "Username" },
+                values: new object[] { 1, 1000, "Risto", "Panchevski", "P@ssw0rd", 2, "risto@gmail.com" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Tickets_UserId",

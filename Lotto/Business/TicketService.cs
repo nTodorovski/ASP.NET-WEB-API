@@ -25,9 +25,9 @@ namespace Business
 
         }
 
-        public void CreateTicket(TicketModel model)
+        public void CreateTicket(int userId,TicketModel model)
         {
-            var user = _userRepository.GetById(model.UserId);
+            var user = _userRepository.GetById(userId);
             if (user == null)
                 throw new Exception("User not found!");
 
@@ -61,17 +61,18 @@ namespace Business
 
             var ticket = new Ticket()
             {
+                Id = 0,
                 Combination = model.Combination,
-                UserId = model.UserId,
+                UserId = user.Id,
                 Status = StatusEnum.Pending,
                 AwardBalance = 0,
-                RoundId = nextRound
+                RoundId = nextRound,
             };
 
             user.Balance = user.Balance - 50;
-            user.Tickets.Add(ticket);
-            _userRepository.Update(user);
             _ticketRepository.Add(ticket);
+            _userRepository.Update(user);
+
         }
 
         public IEnumerable<TicketModel> GetAllByUser(int id)
@@ -81,7 +82,6 @@ namespace Business
                 .Where(x => x.UserId == id)
                 .Select(x => new TicketModel
                 {
-                    UserId = id,
                     Combination = x.Combination
                 }).ToList();
         }

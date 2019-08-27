@@ -11,6 +11,8 @@ namespace DomainModels
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public string Username { get; set; }
+        [MinLength(8)]
+        public string Password { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int Balance { get; set; }

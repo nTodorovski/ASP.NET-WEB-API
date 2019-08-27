@@ -1,0 +1,14 @@
+C:\Users\nikola.ztodorovski\Desktop\ASP.NET-WEB-API\Lotto\Mappers\bin\Debug\netcoreapp2.2\Mappers.deps.json
+C:\Users\nikola.ztodorovski\Desktop\ASP.NET-WEB-API\Lotto\Mappers\bin\Debug\netcoreapp2.2\Mappers.dll
+C:\Users\nikola.ztodorovski\Desktop\ASP.NET-WEB-API\Lotto\Mappers\bin\Debug\netcoreapp2.2\Mappers.pdb
+C:\Users\nikola.ztodorovski\Desktop\ASP.NET-WEB-API\Lotto\Mappers\bin\Debug\netcoreapp2.2\DomainModels.dll
+C:\Users\nikola.ztodorovski\Desktop\ASP.NET-WEB-API\Lotto\Mappers\bin\Debug\netcoreapp2.2\Models.dll
+C:\Users\nikola.ztodorovski\Desktop\ASP.NET-WEB-API\Lotto\Mappers\bin\Debug\netcoreapp2.2\DomainModels.pdb
+C:\Users\nikola.ztodorovski\Desktop\ASP.NET-WEB-API\Lotto\Mappers\bin\Debug\netcoreapp2.2\Models.pdb
+C:\Users\nikola.ztodorovski\Desktop\ASP.NET-WEB-API\Lotto\Mappers\obj\Debug\netcoreapp2.2\Mappers.csprojAssemblyReference.cache
+C:\Users\nikola.ztodorovski\Desktop\ASP.NET-WEB-API\Lotto\Mappers\obj\Debug\netcoreapp2.2\Mappers.csproj.CoreCompileInputs.cache
+C:\Users\nikola.ztodorovski\Desktop\ASP.NET-WEB-API\Lotto\Mappers\obj\Debug\netcoreapp2.2\Mappers.AssemblyInfoInputs.cache
+C:\Users\nikola.ztodorovski\Desktop\ASP.NET-WEB-API\Lotto\Mappers\obj\Debug\netcoreapp2.2\Mappers.AssemblyInfo.cs
+C:\Users\nikola.ztodorovski\Desktop\ASP.NET-WEB-API\Lotto\Mappers\obj\Debug\netcoreapp2.2\Mappers.csproj.CopyComplete
+C:\Users\nikola.ztodorovski\Desktop\ASP.NET-WEB-API\Lotto\Mappers\obj\Debug\netcoreapp2.2\Mappers.dll
+C:\Users\nikola.ztodorovski\Desktop\ASP.NET-WEB-API\Lotto\Mappers\obj\Debug\netcoreapp2.2\Mappers.pdb

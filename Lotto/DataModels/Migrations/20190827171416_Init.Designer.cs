@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DomainModels.Migrations
 {
     [DbContext(typeof(LottoContext))]
-    [Migration("20190827153500_InitSetup")]
-    partial class InitSetup
+    [Migration("20190827171416_Init")]
+    partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -70,6 +70,8 @@ namespace DomainModels.Migrations
 
                     b.Property<string>("LastName");
 
+                    b.Property<string>("Password");
+
                     b.Property<int>("Role");
 
                     b.Property<string>("Username");
@@ -77,6 +79,18 @@ namespace DomainModels.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Balance = 1000,
+                            FirstName = "Risto",
+                            LastName = "Panchevski",
+                            Password = "P@ssw0rd",
+                            Role = 2,
+                            Username = "risto@gmail.com"
+                        });
                 });
 
             modelBuilder.Entity("DomainModels.Ticket", b =>

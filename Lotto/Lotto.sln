@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2041
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lotto", "Lotto\Lotto.csproj", "{F8CB1C30-380B-4F75-869F-2B1BE091B139}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lotto", "Lotto\Lotto.csproj", "{F8CB1C30-380B-4F75-869F-2B1BE091B139}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainModels", "DataModels\DomainModels.csproj", "{E49267A8-AEAB-4715-AB9D-CAA411197103}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DomainModels", "DataModels\DomainModels.csproj", "{E49267A8-AEAB-4715-AB9D-CAA411197103}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{900A06D7-79AF-4C31-B784-7DFF4B6C6BD1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{900A06D7-79AF-4C31-B784-7DFF4B6C6BD1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{2A3D8699-A0DF-4E2E-8127-D8197F49DC92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Business", "Business\Business.csproj", "{2A3D8699-A0DF-4E2E-8127-D8197F49DC92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{78C0E7CB-DECE-408E-8844-ABF3D8616FFA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{78C0E7CB-DECE-408E-8844-ABF3D8616FFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mappers", "Mappers\Mappers.csproj", "{47D079A3-BCA9-4020-A798-9272B6691748}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{78C0E7CB-DECE-408E-8844-ABF3D8616FFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78C0E7CB-DECE-408E-8844-ABF3D8616FFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78C0E7CB-DECE-408E-8844-ABF3D8616FFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47D079A3-BCA9-4020-A798-9272B6691748}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47D079A3-BCA9-4020-A798-9272B6691748}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47D079A3-BCA9-4020-A798-9272B6691748}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47D079A3-BCA9-4020-A798-9272B6691748}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

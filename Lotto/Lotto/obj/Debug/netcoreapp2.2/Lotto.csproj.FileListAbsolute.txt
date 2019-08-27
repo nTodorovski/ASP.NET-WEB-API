@@ -52,10 +52,12 @@ C:\Users\nikola.ztodorovski\Desktop\ASP.NET-WEB-API\Lotto\Lotto\bin\Debug\netcor
 C:\Users\nikola.ztodorovski\Desktop\ASP.NET-WEB-API\Lotto\Lotto\bin\Debug\netcoreapp2.2\Business.dll
 C:\Users\nikola.ztodorovski\Desktop\ASP.NET-WEB-API\Lotto\Lotto\bin\Debug\netcoreapp2.2\Data.dll
 C:\Users\nikola.ztodorovski\Desktop\ASP.NET-WEB-API\Lotto\Lotto\bin\Debug\netcoreapp2.2\DomainModels.dll
+C:\Users\nikola.ztodorovski\Desktop\ASP.NET-WEB-API\Lotto\Lotto\bin\Debug\netcoreapp2.2\Mappers.dll
 C:\Users\nikola.ztodorovski\Desktop\ASP.NET-WEB-API\Lotto\Lotto\bin\Debug\netcoreapp2.2\Models.dll
 C:\Users\nikola.ztodorovski\Desktop\ASP.NET-WEB-API\Lotto\Lotto\bin\Debug\netcoreapp2.2\Business.pdb
 C:\Users\nikola.ztodorovski\Desktop\ASP.NET-WEB-API\Lotto\Lotto\bin\Debug\netcoreapp2.2\Data.pdb
 C:\Users\nikola.ztodorovski\Desktop\ASP.NET-WEB-API\Lotto\Lotto\bin\Debug\netcoreapp2.2\DomainModels.pdb
+C:\Users\nikola.ztodorovski\Desktop\ASP.NET-WEB-API\Lotto\Lotto\bin\Debug\netcoreapp2.2\Mappers.pdb
 C:\Users\nikola.ztodorovski\Desktop\ASP.NET-WEB-API\Lotto\Lotto\bin\Debug\netcoreapp2.2\Models.pdb
 C:\Users\nikola.ztodorovski\Desktop\ASP.NET-WEB-API\Lotto\Lotto\obj\Debug\netcoreapp2.2\Lotto.csprojAssemblyReference.cache
 C:\Users\nikola.ztodorovski\Desktop\ASP.NET-WEB-API\Lotto\Lotto\obj\Debug\netcoreapp2.2\Lotto.csproj.CoreCompileInputs.cache

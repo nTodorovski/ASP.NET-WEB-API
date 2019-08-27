@@ -32,10 +32,17 @@ namespace Lotto.Controllers
         // POST api/<controller>
         [Route("register")]
         [HttpPost]
-        public IActionResult RegisterUser([FromBody] UserModel model)
+        public IActionResult RegisterUser([FromBody] RegisterModel model)
         {
             _userService.Register(model);
             return Ok();
+        }
+
+        [Route("authenticate")]
+        [HttpPost]
+        public IActionResult Authenticate([FromBody] LoginModel model)
+        {
+            return Ok(_userService.Authenticate(model));
         }
     }
 }

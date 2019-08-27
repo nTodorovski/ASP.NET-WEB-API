@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Business;
 using DomainModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -20,6 +21,7 @@ namespace Lotto.Controllers
             _roundResultService = roundResultService;
         }
 
+        [Authorize(Roles = "Administrator")]
         [Route("drawround")]
         [HttpPost]
         public IActionResult DrawRound()
@@ -28,6 +30,7 @@ namespace Lotto.Controllers
             return Ok($"A new round has started!");
         }
 
+        [Authorize]
         [Route("getresult")]
         [HttpGet]
         public IEnumerable<RoundResult> GetResults()

@@ -68,6 +68,8 @@ namespace DomainModels.Migrations
 
                     b.Property<string>("LastName");
 
+                    b.Property<string>("Password");
+
                     b.Property<int>("Role");
 
                     b.Property<string>("Username");
@@ -75,6 +77,18 @@ namespace DomainModels.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Balance = 1000,
+                            FirstName = "Risto",
+                            LastName = "Panchevski",
+                            Password = "P@ssw0rd",
+                            Role = 2,
+                            Username = "risto@gmail.com"
+                        });
                 });
 
             modelBuilder.Entity("DomainModels.Ticket", b =>
