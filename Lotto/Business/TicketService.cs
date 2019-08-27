@@ -69,8 +69,7 @@ namespace Business
             };
 
             user.Balance = user.Balance - 50;
-            //TODO: Da se prasha za ova zosto ne raboti
-            //user.Tickets.Add(ticket);
+            user.Tickets.Add(ticket);
             _userRepository.Update(user);
             _ticketRepository.Add(ticket);
         }

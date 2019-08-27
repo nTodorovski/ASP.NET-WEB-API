@@ -59,8 +59,6 @@ namespace Business
                 .Where(x => x.RoundId == roundId)
                 .ToList();
 
-            round.Tickets = tickets;
-
             foreach (var ticket in tickets)
             {
                 var combination = ticket.Combination.Split(",").Select(x => Int32.Parse(x)).ToList();
@@ -102,9 +100,6 @@ namespace Business
                 user.Balance = user.Balance + ticket.AwardBalance;
                 _ticketRepository.Update(ticket);
                 _userRepository.Update(user);
-                //Puka tuka pred roundRepository
-                //Da se prasha zosto vo baza tiketite taka se zacuvuvaat
-                //zosto na vo TicketService ne moze da se stavi ticketot vo Tickets na Userot
                 _roundResultRepository.Add(round);
             }
         }

@@ -15,6 +15,6 @@ namespace DomainModels
         public string LastName { get; set; }
         public int Balance { get; set; }
         public RoleEnum Role { get; set; }
-        public ICollection<Ticket> Tickets { get; set; }
+        public virtual ICollection<Ticket> Tickets { get; set; }
     }
 }
