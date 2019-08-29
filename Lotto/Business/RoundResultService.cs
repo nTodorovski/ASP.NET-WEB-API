@@ -54,6 +54,8 @@ namespace Business
             if (_roundResultRepository.GetAll().Count() != 0)
                 roundId = _roundResultRepository.GetAll().Max(x => x.Id) + 1;
 
+            _roundResultRepository.Add(round);
+            
             var tickets = _ticketRepository
                 .GetAll()
                 .Where(x => x.RoundId == roundId)
@@ -100,7 +102,6 @@ namespace Business
                 user.Balance = user.Balance + ticket.AwardBalance;
                 _ticketRepository.Update(ticket);
                 _userRepository.Update(user);
-                _roundResultRepository.Add(round);
             }
         }
     }
