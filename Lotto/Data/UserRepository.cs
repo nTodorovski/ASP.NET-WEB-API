@@ -9,17 +9,17 @@ namespace Data
 {
     public class UserRepository : IRepository<User>
     {
-        private readonly string _connectionString;
+        //private readonly string _connectionString;
 
 
-        public UserRepository(IConfiguration configuration)
-        {
-            _connectionString = configuration.GetConnectionString("ToDoDatabase");
-        }
+        //public UserRepository(IConfiguration configuration)
+        //{
+        //    _connectionString = configuration.GetConnectionString("ToDoDatabase");
+        //}
 
         public void Add(User entity)
         {
-            using (var dbContext = new LottoContext(_connectionString))
+            using (var dbContext = new LottoContext())
             {
                 dbContext.Users.Add(entity);
                 dbContext.SaveChanges();
@@ -28,7 +28,7 @@ namespace Data
 
         public void Delete(User entity)
         {
-            using (var dbContext = new LottoContext(_connectionString))
+            using (var dbContext = new LottoContext())
             {
                 dbContext.Users.Remove(entity);
                 dbContext.SaveChanges();
@@ -37,7 +37,7 @@ namespace Data
 
         public IEnumerable<User> GetAll()
         {
-            using (var dbContext = new LottoContext(_connectionString))
+            using (var dbContext = new LottoContext())
             {
                 return dbContext.Users.ToList();
             }
@@ -45,7 +45,7 @@ namespace Data
 
         public User GetById(int id)
         {
-            using (var dbContext = new LottoContext(_connectionString))
+            using (var dbContext = new LottoContext())
             {
                 return dbContext.Users.FirstOrDefault(x => x.Id == id);
             }
@@ -53,7 +53,7 @@ namespace Data
 
         public void Update(User entity)
         {
-            using (var dbContext = new LottoContext(_connectionString))
+            using (var dbContext = new LottoContext())
             {
                 dbContext.Users.Update(entity);
                 dbContext.SaveChanges();

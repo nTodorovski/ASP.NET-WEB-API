@@ -28,34 +28,27 @@ namespace Business
             return _roundResultRepository.GetAll();
         }
 
-        public void Draw()
+        public List<int> Draw7Numbers()
         {
-            RoundResult round = new RoundResult();
-
             List<int> winningCombination = new List<int>();
             Random random = new Random();
 
-            for(var i = 0; i < 7; i++)
+            for (var i = 0; i < 7; i++)
             {
                 int number = random.Next(1, 37);
-                if (winningCombination.Contains(number)) {
+                if (winningCombination.Contains(number))
+                {
                     i--;
                     continue;
                 }
 
                 winningCombination.Add(number);
             }
+            return winningCombination;
+        }
 
-            
-            round.WinningCombination = string.Join(",", winningCombination);
-
-            int roundId = 1;
-
-            if (_roundResultRepository.GetAll().Count() != 0)
-                roundId = _roundResultRepository.GetAll().Max(x => x.Id) + 1;
-
-            _roundResultRepository.Add(round);
-            
+        public void ClaimAwards(int roundId, List<int> winningCombination)
+        {
             var tickets = _ticketRepository
                 .GetAll()
                 .Where(x => x.RoundId == roundId)
@@ -74,7 +67,7 @@ namespace Business
                 }
 
                 var user = _userRepository.GetById(ticket.UserId);
-                
+
                 switch (combinationCounter)
                 {
                     case 4:
@@ -103,6 +96,24 @@ namespace Business
                 _ticketRepository.Update(ticket);
                 _userRepository.Update(user);
             }
+        }
+
+        public void Draw()
+        {
+            RoundResult round = new RoundResult();
+
+            List<int> winningCombination = Draw7Numbers();
+            
+            round.WinningCombination = string.Join(",", winningCombination);
+
+            int roundId = 1;
+
+            if (_roundResultRepository.GetAll().Count() != 0)
+                roundId = _roundResultRepository.GetAll().Max(x => x.Id) + 1;
+
+            _roundResultRepository.Add(round);
+
+            ClaimAwards(roundId, winningCombination);
         }
     }
 }

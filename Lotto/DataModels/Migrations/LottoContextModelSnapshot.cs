@@ -85,7 +85,7 @@ namespace DomainModels.Migrations
                             Balance = 1000,
                             FirstName = "Risto",
                             LastName = "Panchevski",
-                            Password = "P@ssw0rd",
+                            Password = @"?}E?4F?N????",
                             Role = 2,
                             Username = "risto@gmail.com"
                         });

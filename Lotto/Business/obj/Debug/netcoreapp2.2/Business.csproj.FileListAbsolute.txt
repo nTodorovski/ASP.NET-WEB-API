@@ -48,3 +48,5 @@ C:\Users\nikola.ztodorovski\Desktop\ASP.NET-WEB-API\Lotto\Business\obj\Debug\net
 C:\Users\nikola.ztodorovski\Desktop\ASP.NET-WEB-API\Lotto\Business\obj\Debug\netcoreapp2.2\Business.csproj.CopyComplete
 C:\Users\nikola.ztodorovski\Desktop\ASP.NET-WEB-API\Lotto\Business\obj\Debug\netcoreapp2.2\Business.dll
 C:\Users\nikola.ztodorovski\Desktop\ASP.NET-WEB-API\Lotto\Business\obj\Debug\netcoreapp2.2\Business.pdb
+C:\Users\Nikola\Desktop\ASP.NET-WEB-API\Lotto\Business\bin\Debug\netcoreapp2.2\Mappers.dll
+C:\Users\Nikola\Desktop\ASP.NET-WEB-API\Lotto\Business\bin\Debug\netcoreapp2.2\Mappers.pdb

@@ -64,7 +64,8 @@ namespace DomainModels.Migrations
             migrationBuilder.InsertData(
                 table: "Users",
                 columns: new[] { "Id", "Balance", "FirstName", "LastName", "Password", "Role", "Username" },
-                values: new object[] { 1, 1000, "Risto", "Panchevski", "P@ssw0rd", 2, "risto@gmail.com" });
+                values: new object[] { 1, 1000, "Risto", "Panchevski", @"?}E?4F?N
+????", 2, "risto@gmail.com" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Tickets_UserId",

@@ -69,3 +69,5 @@ C:\Users\nikola.ztodorovski\Desktop\ASP.NET-WEB-API\Lotto\Lotto\obj\Debug\netcor
 C:\Users\nikola.ztodorovski\Desktop\ASP.NET-WEB-API\Lotto\Lotto\obj\Debug\netcoreapp2.2\Lotto.csproj.CopyComplete
 C:\Users\nikola.ztodorovski\Desktop\ASP.NET-WEB-API\Lotto\Lotto\obj\Debug\netcoreapp2.2\Lotto.dll
 C:\Users\nikola.ztodorovski\Desktop\ASP.NET-WEB-API\Lotto\Lotto\obj\Debug\netcoreapp2.2\Lotto.pdb
+C:\Users\Nikola\Desktop\ASP.NET-WEB-API\Lotto\Lotto\bin\Debug\netcoreapp2.2\Mappers.dll
+C:\Users\Nikola\Desktop\ASP.NET-WEB-API\Lotto\Lotto\bin\Debug\netcoreapp2.2\Mappers.pdb

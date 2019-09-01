@@ -9,5 +9,7 @@ namespace Business
     {
         IEnumerable<RoundResult> GetAll();
         void Draw();
+        List<int> Draw7Numbers();
+        void ClaimAwards(int roundId, List<int> winningCombination);
     }
 }

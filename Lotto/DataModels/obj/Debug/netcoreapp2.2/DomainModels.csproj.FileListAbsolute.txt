@@ -23,3 +23,4 @@ C:\Users\nikola.ztodorovski\Desktop\ASP.NET-WEB-API\Lotto\DataModels\obj\Debug\n
 C:\Users\nikola.ztodorovski\Desktop\ASP.NET-WEB-API\Lotto\DataModels\obj\Debug\netcoreapp2.2\DomainModels.AssemblyInfo.cs
 C:\Users\nikola.ztodorovski\Desktop\ASP.NET-WEB-API\Lotto\DataModels\obj\Debug\netcoreapp2.2\DomainModels.dll
 C:\Users\nikola.ztodorovski\Desktop\ASP.NET-WEB-API\Lotto\DataModels\obj\Debug\netcoreapp2.2\DomainModels.pdb
+C:\Users\Nikola\Desktop\ASP.NET-WEB-API\Lotto\DataModels\obj\Debug\netcoreapp2.2\DomainModels.csprojAssemblyReference.cache

@@ -33,6 +33,9 @@
               "C:\\Users\\Nikola\\Desktop\\ASP.NET-WEB-API\\Lotto\\Data\\Data.csproj": {
                 "projectPath": "C:\\Users\\Nikola\\Desktop\\ASP.NET-WEB-API\\Lotto\\Data\\Data.csproj"
               },
+              "C:\\Users\\Nikola\\Desktop\\ASP.NET-WEB-API\\Lotto\\Mappers\\Mappers.csproj": {
+                "projectPath": "C:\\Users\\Nikola\\Desktop\\ASP.NET-WEB-API\\Lotto\\Mappers\\Mappers.csproj"
+              },
               "C:\\Users\\Nikola\\Desktop\\ASP.NET-WEB-API\\Lotto\\Models\\Models.csproj": {
                 "projectPath": "C:\\Users\\Nikola\\Desktop\\ASP.NET-WEB-API\\Lotto\\Models\\Models.csproj"
               }
@@ -53,6 +56,10 @@
               "target": "Package",
               "version": "[2.2.0, )",
               "autoReferenced": true
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[5.5.0, )"
             }
           },
           "imports": [
@@ -151,6 +158,65 @@
             "projectReferences": {
               "C:\\Users\\Nikola\\Desktop\\ASP.NET-WEB-API\\Lotto\\DataModels\\DomainModels.csproj": {
                 "projectPath": "C:\\Users\\Nikola\\Desktop\\ASP.NET-WEB-API\\Lotto\\DataModels\\DomainModels.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\Nikola\\Desktop\\ASP.NET-WEB-API\\Lotto\\Mappers\\Mappers.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Nikola\\Desktop\\ASP.NET-WEB-API\\Lotto\\Mappers\\Mappers.csproj",
+        "projectName": "Mappers",
+        "projectPath": "C:\\Users\\Nikola\\Desktop\\ASP.NET-WEB-API\\Lotto\\Mappers\\Mappers.csproj",
+        "packagesPath": "C:\\Users\\Nikola\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nikola\\Desktop\\ASP.NET-WEB-API\\Lotto\\Mappers\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Nikola\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\Nikola\\Desktop\\ASP.NET-WEB-API\\Lotto\\DataModels\\DomainModels.csproj": {
+                "projectPath": "C:\\Users\\Nikola\\Desktop\\ASP.NET-WEB-API\\Lotto\\DataModels\\DomainModels.csproj"
+              },
+              "C:\\Users\\Nikola\\Desktop\\ASP.NET-WEB-API\\Lotto\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\Nikola\\Desktop\\ASP.NET-WEB-API\\Lotto\\Models\\Models.csproj"
               }
             }
           }

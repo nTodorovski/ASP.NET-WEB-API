@@ -9,16 +9,16 @@ namespace Data
 {
     public class TicketRepository : IRepository<Ticket>
     {
-        private readonly string _connectionString;
+        //private readonly string _connectionString;
         
-        public TicketRepository(IConfiguration configuration)
-        {
-            _connectionString = configuration.GetConnectionString("ToDoDatabase");
-        }
+        //public TicketRepository(IConfiguration configuration)
+        //{
+        //    _connectionString = configuration.GetConnectionString("ToDoDatabase");
+        //}
 
         public void Add(Ticket entity)
         {
-            using (var dbContext = new LottoContext(_connectionString))
+            using (var dbContext = new LottoContext())
             {
                 dbContext.Tickets.Add(entity);
                 dbContext.SaveChanges();
@@ -27,7 +27,7 @@ namespace Data
 
         public void Delete(Ticket entity)
         {
-            using (var dbContext = new LottoContext(_connectionString))
+            using (var dbContext = new LottoContext())
             {
                 dbContext.Tickets.Remove(entity);
                 dbContext.SaveChanges();
@@ -36,7 +36,7 @@ namespace Data
 
         public IEnumerable<Ticket> GetAll()
         {
-            using (var dbContext = new LottoContext(_connectionString))
+            using (var dbContext = new LottoContext())
             {
                 return dbContext.Tickets.ToList();
             }
@@ -44,7 +44,7 @@ namespace Data
 
         public Ticket GetById(int id)
         {
-            using (var dbContext = new LottoContext(_connectionString))
+            using (var dbContext = new LottoContext())
             {
                 return dbContext.Tickets.FirstOrDefault(x => x.Id == id);
             }
@@ -52,7 +52,7 @@ namespace Data
 
         public void Update(Ticket entity)
         {
-            using (var dbContext = new LottoContext(_connectionString))
+            using (var dbContext = new LottoContext())
             {
                 dbContext.Tickets.Update(entity);
                 dbContext.SaveChanges();
